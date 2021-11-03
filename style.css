@@ -1,5 +1,44 @@
-.mainContainer
+h1,h2{
+    text-align: center;
+}
+.flexBox{
+    display: flex;
+    justify-content: center;
+}
+.Box
 {
-    color: aqua;
+    display: grid;
+    grid-template-columns: 1f, 1f;
+    grid-template-rows: 40px, 1f;
+}
+.tabs{
+    background-color: cadetblue;
+    grid-area: 1 / 1 / 2 / 3;
+    display: flex;
+    justify-content: right;
+}
+.subBox
+{
+    grid-column-start: 1;
+    grid-row-start: 2;
     background-color: brown;
+    padding: 20px;
+}
+.description
+{
+    grid-template-columns: 1f, 1f;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    background-color: brown;
+    padding: 20px;
+}
+.general
+{
+    grid-column-start: 1;
+    padding: 5px;
+}
+.skills
+{
+    grid-column-start: 2;
+    padding: 5px;
 }
