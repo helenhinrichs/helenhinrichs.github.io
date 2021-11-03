@@ -12,13 +12,50 @@
     <h2>Definitely not a web developer</h2>
     <div class="flexBox">
         <div class="Box">
-            <div class="tabs"> <button type="button">Skills</button><button type="button">Inventory</button><button type="button">Quests</button><button type="button">Journal</button></div>
+            <div class="tabs"> <button onclick="skills()">Skills</button><button onclick="inventory()">Inventory</button><button onclick="quests()">Quests</button><button onclick="journal()">Journal</button></div>
             <div class="subBox"> <img src="Images/toni.jpg" alt="toni from deponia"> </div>
             <div class="description">
-                <div class="general"><h3>General</h3>Name: Helen Hinrichs <br>Age: 29 <br>Origin: Schwerin, Germany<br>Height: 1,66m</div>
-                <div class="skills"><h3>Skills</h3>C#: 8/10 <br>C++: 5/10 <br>Unity: 6/10<br>Maya: 5/10</div>
+                <div id ="general" class="characterInfo"><h3>General</h3>Name: Helen Hinrichs <br>Age: 29 <br>Origin: Schwerin, Germany<br>Height: 1,66m</div>
+                <div id="skills" class="characterInfo" style="display: none;"><h3>Skills</h3>C#: 8/10 <br>C++: 5/10 <br>Unity: 6/10<br>Maya: 5/10</div>
+                <div id="inventory" class="characterInfo" style="display: none;"><h3>Inventory</h3>I have things...</div>
+                <div id="quests" class="characterInfo" style="display: none;"><h3>Quests</h3>Find a job as an intern.</div>
+                <div id="journal" class="characterInfo" style="display: none;"><h3>Journal</h3>Today has been a nice day.</div>
             </div>
         </div>
     </div>
 </body>
+<script>
+    function skills(){
+        var infos = document.getElementsByClassName("characterInfo");
+        for(let i = 0; i < infos.length; i++)
+        {
+            infos[i].style.display = "none";
+        }    
+        document.getElementById("skills").style.display = "block";
+    }
+    function inventory(){
+        var infos = document.getElementsByClassName("characterInfo");
+        for(let i = 0; i < infos.length; i++)
+        {
+            infos[i].style.display = "none";
+        }   
+        document.getElementById("inventory").style.display = "block";
+    }
+    function quests(){
+        var infos = document.getElementsByClassName("characterInfo");
+        for(let i = 0; i < infos.length; i++)
+        {
+            infos[i].style.display = "none";
+        }            
+        document.getElementById("quests").style.display = "block";
+    }
+    function journal(){
+        var infos = document.getElementsByClassName("characterInfo");
+        for(let i = 0; i < infos.length; i++)
+        {
+            infos[i].style.display = "none";
+        }            
+        document.getElementById("journal").style.display = "block";
+    }
+  </script>
 </html>
