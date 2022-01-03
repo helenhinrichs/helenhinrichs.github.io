@@ -1,18 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 body{
     background: #15161F;
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+    margin: none;
+    padding: none;
 }
-h1,h2{
+h1,h2,h3{
     text-align: center;
+    font-family: 'Russo One', sans-serif;
+    font-weight: 400;
 }
 .flexBox{
     display: flex;
     justify-content: center;
+    margin-top: 48px;
 }
 .Box
 {
     display: grid;
-    grid-template-columns: 1f, 1f;
-    grid-template-rows: 40px, 1f;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 40px  1f;
 }
 .tabs{
     background-color: cadetblue;
@@ -20,27 +29,178 @@ h1,h2{
     display: flex;
     justify-content: right;
 }
+/* #profileImage{
+    margin-top: -60px;
+    margin-bottom: -10px;
+} */
 .subBox
 {
     grid-column-start: 1;
-    grid-row-start: 2;
-    background-color: brown;
-    padding: 20px;
+    overflow: hidden;
 }
 .description
 {
-    grid-template-columns: 1f, 1f;
     grid-column-start: 2;
-    grid-row-start: 2;
-    background-color: brown;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
-.general
-{
+#activeQuest{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 0px;
+    height: 228px;
+    overflow: hidden;
+    height: fit-content;
+}
+#activeQuestDescription{
     grid-column-start: 1;
-    padding: 5px;
+    margin: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: fit-content;
+}
+#activeQuestImage{
+    grid-column-start: 2;
+    margin: none;
+    background-image: url("Images/SF_snapshot.png");
+    background-size:cover;
+    clip-path: 
+    polygon(
+      0 0,
+      100% 0,
+      100% 100%,
+      5% 100%
+    );
+    border-radius: 0px 8px 8px 0px;
+}
+.questTitle{
+    box-shadow: 0px 2px #81f78599;
+}
+#activeQuestDescription > h3{
+    margin: 16px 0px;
+    font-size: 24px;
+}
+#activeQuestDescription > p{
+    margin: 16px 0px;
+    font-weight: 500;
+}
+.button{
+    color: black;
+    background-color: #8C9EFF;
+    width: fit-content;
+    padding: 8px 16px;
+    margin: 16px 0px;
+    font-weight: 500;
+}
+#activeQuestHead{
+    color: #81F785;
+    font-weight:400;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    font-style: normal;
+    font-size: 12px;
 }
 .display
 {
     display: block;
+}
+.characterInfo{
+    background: #282931;
+    border-radius: 8px;
+    padding: 32px;
+    margin: 12px 0px;
+}
+.characterInfo>h3{
+    font-weight: 400;
+    font-size: 24px;
+}
+#headline{
+    margin-top: 10px;
+    padding: 5px;
+}
+#headline{
+    margin: 12px 0px;
+}
+#headline>p{
+    font-size: 24px;
+    font-weight: 400;
+}
+#headline>h1{
+    text-align: left;
+    font-weight: 400;
+    font-size: 48px;
+}
+h3{
+    text-align: start;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6,p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+h1{
+    font-size: 40px;
+}
+.header{
+    box-shadow:0px 2px #3A3B43;
+    display: flex;
+    justify-content: row;
+    justify-content: center;
+    z-index: 1;
+    position:fixed;
+    width: 100%;
+    top:0;
+    background-color: rgba(21, 22, 31, 0.9);
+}
+.menuPoint{
+    margin: 0px 10px;
+    padding: 16px 24px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #3A3B43;
+}
+.selected{
+    color: #8C9EFF;
+    box-shadow:0px 2px #8C9EFF;
+}
+.hover{
+    color: #FFF;
+    box-shadow:0px 2px #FFF;
+}
+.innerBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 16px;
+}
+.circle{
+    background: #8C9EFF;
+    border-radius: 50%;
+    width : 48px;
+    height: 48px;
+    padding: auto;
+    margin: 16px;
+}
+.icon{
+    top: 50%;
+    left: 50%;
+    transform: translate(50%, 50%);
+}
+#skills{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.skill{
+    text-align: center;
+    margin-top: 16px;
+    width: min-content;
+}
+.skillImage{
+    filter: invert(99%) sepia(26%) saturate(2831%) hue-rotate(48deg) brightness(102%) contrast(90%);
+    width: 48px;
+    height: 48px;
+}
+.skillList{
+    color: rgba(255, 255, 255, 0.6);
 }

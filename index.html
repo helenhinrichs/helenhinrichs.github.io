@@ -8,54 +8,110 @@
     <title>Helen Hinrichs - Portfolio</title>
 </head>
 <body>
-    <h1>Portfolio of Helen Hinrichs</h1>
-    <h2>Definitely not a web developer</h2>
+    <div class="header">
+        <div class="menuPoint" onmouseover="hover(this)" onmouseleave="leaveHover(this)" onclick="select(this)">Profile</div>
+        <div class="menuPoint" onmouseover="hover(this)" onmouseleave="leaveHover(this)" onclick="select(this)">Skills</div>
+        <div class="menuPoint" onmouseover="hover(this)" onmouseleave="leaveHover(this)" onclick="select(this)">Quests</div>
+    </div>
     <div class="flexBox">
         <div class="Box">
-            <div class="tabs"> <button onclick="skills()">Skills</button><button onclick="inventory()">Inventory</button><button onclick="quests()">Quests</button><button onclick="journal()">Journal</button></div>
-            <div class="subBox"> <img src="Images/Heleen-03.svg" alt="Helen Hinrichs"> </div>
+            <!--<div class="tabs"> <button onclick="skills()">Skills</button><button onclick="inventory()">Inventory</button><button onclick="quests()">Quests</button><button onclick="journal()">Journal</button></div>*-->
+            <div class="subBox"> <img id="profileImage" src="Images/Heleen_small.svg"width= "331" alt="Helen Hinrichs"> </div>
             <div class="description">
-                <div id ="general" class="characterInfo"><h3>General</h3>Name: Helen Hinrichs <br>Age: 29 <br>Origin: Schwerin, Germany<br>Height: 1,66m</div>
-                <div id="skills" class="characterInfo" style="display: none;"><h3>Skills</h3>C#: 8/10 <br>C++: 5/10 <br>Unity: 6/10<br>Maya: 5/10</div>
-                <div id="inventory" class="characterInfo" style="display: none;"><h3>Inventory</h3>I have things...</div>
-                <div id="quests" class="characterInfo" style="display: none;"><h3>Quests</h3>Find a job as an intern.</div>
-                <div id="journal" class="characterInfo" style="display: none;"><h3>Journal</h3>Today has been a nice day.</div>
+                <div id="headline">    
+                    <h1>Helen Hinrichs</h1>
+                    <p>Game Programmer</p>
+                </div> 
+                <div id ="activeQuest" class="characterInfo">
+                    <div id="activeQuestDescription">
+                        <div id="activeQuestHead">Active Quest</div>
+                        <h3>Symphonic Forest</h3>
+                        <svg height="2" width="168">
+                            <line x1="0" y1="0" x2="168" y2="0" style="stroke:#81f78599;stroke-width:2"/>
+                        </svg> 
+                        <p>Audio . Game</p>
+                        <div class="button">View Project</div>
+                    </div>
+                    <div id="activeQuestImage">
+                    </div>
+                </div>
+                <div class="characterInfo">
+                    <h3>Top 3 Skills</h3>
+                    <div id="skills">
+                        <div class="skill"><img class="skillImage" src="Images/keyboard_alt_black_24dp.svg"> 
+                            <p>Programming<br>Languages</p>
+                            <p class="skillList">C++, C#, JavaScript</p>
+                        </div>
+                        <div class="skill"><img class="skillImage" src="Images/sports_esports_black_24dp.svg"> 
+                            <p>Game<br>Programming</p>
+                            <p class="skillList">Unity, MonoGame, SFML</p>
+                        </div>
+                        <div class="skill"><img class="skillImage" src="Images/photo_black_24dp.svg"> 
+                            <p>Graphic<br>Programming</p>
+                            <p class="skillList">OpenGL(ES), OpenCV</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="contact" class="characterInfo">
+                    <h3>Contact</h3>
+                    <div class="innerBox">
+                        <div class="circle"><img class="icon" src="Images/mail.svg" alt="Mail contact"></div>
+                        <div class="circle"><img class="icon" src="Images/github.svg" alt="Mail contact"></div>
+                        <div class="circle"><img class="icon" src="Images/linkedin.svg" alt="Mail contact"></div>
+                    </div>
             </div>
         </div>
     </div>
 </body>
 <script>
-    function skills(){
-        var infos = document.getElementsByClassName("characterInfo");
-        for(let i = 0; i < infos.length; i++)
-        {
-            infos[i].style.display = "none";
-        }    
-        document.getElementById("skills").style.display = "block";
+    function leaveHover(obj)
+    {
+        obj.classList.remove("hover");
     }
-    function inventory(){
-        var infos = document.getElementsByClassName("characterInfo");
-        for(let i = 0; i < infos.length; i++)
-        {
-            infos[i].style.display = "none";
-        }   
-        document.getElementById("inventory").style.display = "block";
+    function hover(obj)
+    {
+        obj.classList.add("hover");
     }
-    function quests(){
-        var infos = document.getElementsByClassName("characterInfo");
-        for(let i = 0; i < infos.length; i++)
-        {
-            infos[i].style.display = "none";
-        }            
-        document.getElementById("quests").style.display = "block";
+    function select(obj)
+    {
+        let menuPointList = document.getElementsByClassName("menuPoint");
+        console.log(menuPointList);
+        for (i = 0; i < menuPointList.length; i++) {
+            menuPointList[i].classList.remove("selected");
+        } 
+        obj.classList.add("selected");
     }
-    function journal(){
-        var infos = document.getElementsByClassName("characterInfo");
-        for(let i = 0; i < infos.length; i++)
-        {
-            infos[i].style.display = "none";
-        }            
-        document.getElementById("journal").style.display = "block";
-    }
+    // function skills(){
+    //     var infos = document.getElementsByClassName("characterInfo");
+    //     for(let i = 0; i < infos.length; i++)
+    //     {
+    //         infos[i].style.display = "none";
+    //     }    
+    //     document.getElementById("skills").style.display = "block";
+    // }
+    // function inventory(){
+    //     var infos = document.getElementsByClassName("characterInfo");
+    //     for(let i = 0; i < infos.length; i++)
+    //     {
+    //         infos[i].style.display = "none";
+    //     }   
+    //     document.getElementById("inventory").style.display = "block";
+    // }
+    // function quests(){
+    //     var infos = document.getElementsByClassName("characterInfo");
+    //     for(let i = 0; i < infos.length; i++)
+    //     {
+    //         infos[i].style.display = "none";
+    //     }            
+    //     document.getElementById("quests").style.display = "block";
+    // }
+    // function journal(){
+    //     var infos = document.getElementsByClassName("characterInfo");
+    //     for(let i = 0; i < infos.length; i++)
+    //     {
+    //         infos[i].style.display = "none";
+    //     }            
+    //     document.getElementById("journal").style.display = "block";
+    // }
   </script>
 </html>
