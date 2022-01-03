@@ -8,11 +8,10 @@
     <title>Helen Hinrichs - Portfolio</title>
 </head>
 <body>
-    <div id="header">
-        <div class="menuPoint" onmouseover="hover(this)" onmouseleave="leaveHover(this)" onclick="select(this)">Profile</div>
-        <div class="menuPoint" onmouseover="hover(this)" onmouseleave="leaveHover(this)" onclick="select(this)">Skills</div>
-        <div class="menuPoint" onmouseover="hover(this)" onmouseleave="leaveHover(this)" onclick="select(this)">Quests</div>
-    </div>
+    <?php 
+    echo "HELO";
+        include 'header.php';
+    ?>
     <div class="flexBox">
         <div class="Box">
             <!--<div class="tabs"> <button onclick="skills()">Skills</button><button onclick="inventory()">Inventory</button><button onclick="quests()">Quests</button><button onclick="journal()">Journal</button></div>*-->
@@ -36,7 +35,7 @@
                     </div>
                 </div>
                 <div class="characterInfo">
-                    <h3>Top 3 Skills</h3>
+                    <h3>Main Skills</h3>
                     <div id="skills">
                         <div class="skill"><img class="skillImage" src="Images/keyboard_alt_black_24dp.svg"> 
                             <p>Programming<br>Languages</p>
@@ -56,47 +55,69 @@
                     <h3>Contact</h3>
                     <div class="innerBox">
                         <div class="circle"><img class="icon" src="Images/mail.svg" alt="Mail contact"></div>
-                        <div class="circle"><img class="icon" src="Images/github.svg" alt="Mail contact"></div>
-                        <div class="circle"><img class="icon" src="Images/linkedin.svg" alt="Mail contact"></div>
+                        <div class="circle" onmousedown="clickButton(this)" onmouseup="releaseButton(this)">
+                            <a href="https://github.com/helenhinrichs" target="_blank">
+                                <img class="icon" src="Images/github.svg" alt="Mail contact">
+                            </a>
+                        </div>
+                        <div class="circle" onmousedown="clickButton(this)" onmouseup="releaseButton(this)">
+                            <a href="https://www.linkedin.com/in/helen-hinrichs-6200b9224/" target="_blank">
+                                <img class="icon" src="Images/linkedin.svg" alt="Mail contact">
+                            </a>
+                        </div>
                     </div>
             </div>
         </div>
     </div>
 </body>
 <script>
-    window.onscroll = function() {scrollFunction()};
+    // window.onscroll = function() {scrollFunction()};
 
-    function scrollFunction() {
-        console.log(document.body.scrollTop);
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            document.getElementById("header").classList.add("shrink");
-        } else {
-            document.getElementById("header").classList.remove("shrink");
-        }
-    } 
+    // function scrollFunction() {
+    //     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    //         document.getElementById("header").classList.add("shrink");
+    //         var children = document.getElementById("header").children;
+    //         for(let i = 0; i < children.length; i++)
+    //         {
+    //             children[i].classList.add("brighter");
+    //         }
+    //     } else {
+    //         document.getElementById("header").classList.remove("shrink");
+    //         var children = document.getElementById("header").children;
+    //         for(let i = 0; i < children.length; i++)
+    //         {
+    //             children[i].classList.remove("brighter");
+    //         }
+    //     }
+    // } 
 
     function leaveHover(obj)
     {
-        obj.classList.remove("hover");
         obj.parentNode.classList.remove("headerSelect");
-        console.log(obj.parentNode);
-        console.log("removed header select");
     }
     function hover(obj)
     {
-        obj.classList.add("hover");
         obj.parentNode.classList.add("headerSelect");
-        console.log(obj.parentNode);
-        console.log("added header select");
     }
     function select(obj)
     {
         let menuPointList = document.getElementsByClassName("menuPoint");
-        console.log(menuPointList);
         for (i = 0; i < menuPointList.length; i++) {
             menuPointList[i].classList.remove("selected");
         } 
         obj.classList.add("selected");
+    }
+    function clickButton(obj)
+    {
+        console.log("click");
+        obj.classList.add("clickedCircle");
+        obj.children[0].classList.add("iconHighlight");
+    }
+    function releaseButton(obj)
+    {
+        console.log("release");
+        obj.classList.remove("clickedCircle");
+        obj.children[0].classList.remove("iconHighlight");
     }
   </script>
 </html>
