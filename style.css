@@ -15,7 +15,7 @@ h1,h2,h3{
 .flexBox{
     display: flex;
     justify-content: center;
-    margin-top: 48px;
+    margin-top: 90px;
 }
 .Box
 {
@@ -37,6 +37,7 @@ h1,h2,h3{
 {
     grid-column-start: 1;
     overflow: hidden;
+    margin-top: 30px;
 }
 .description
 {
@@ -141,7 +142,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6,p {
 h1{
     font-size: 40px;
 }
-.header{
+#header{
     box-shadow:0px 2px #3A3B43;
     display: flex;
     justify-content: row;
@@ -151,10 +152,19 @@ h1{
     width: 100%;
     top:0;
     background-color: rgba(21, 22, 31, 0.9);
+    padding-top: 29px;
+    padding-bottom: 0px;
+    transition: 0.6s;
+}
+.shrink{
+    padding-top: 10px !important;
+}
+.headerSelect{
+    background-color: rgba(21, 22, 31, 1) !important;
 }
 .menuPoint{
-    margin: 0px 10px;
     padding: 16px 24px;
+    padding-top: 0;
     font-size: 20px;
     cursor: pointer;
     color: #3A3B43;

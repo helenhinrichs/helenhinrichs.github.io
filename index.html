@@ -8,7 +8,7 @@
     <title>Helen Hinrichs - Portfolio</title>
 </head>
 <body>
-    <div class="header">
+    <div id="header">
         <div class="menuPoint" onmouseover="hover(this)" onmouseleave="leaveHover(this)" onclick="select(this)">Profile</div>
         <div class="menuPoint" onmouseover="hover(this)" onmouseleave="leaveHover(this)" onclick="select(this)">Skills</div>
         <div class="menuPoint" onmouseover="hover(this)" onmouseleave="leaveHover(this)" onclick="select(this)">Quests</div>
@@ -64,13 +64,30 @@
     </div>
 </body>
 <script>
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        console.log(document.body.scrollTop);
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            document.getElementById("header").classList.add("shrink");
+        } else {
+            document.getElementById("header").classList.remove("shrink");
+        }
+    } 
+
     function leaveHover(obj)
     {
         obj.classList.remove("hover");
+        obj.parentNode.classList.remove("headerSelect");
+        console.log(obj.parentNode);
+        console.log("removed header select");
     }
     function hover(obj)
     {
         obj.classList.add("hover");
+        obj.parentNode.classList.add("headerSelect");
+        console.log(obj.parentNode);
+        console.log("added header select");
     }
     function select(obj)
     {
@@ -81,37 +98,5 @@
         } 
         obj.classList.add("selected");
     }
-    // function skills(){
-    //     var infos = document.getElementsByClassName("characterInfo");
-    //     for(let i = 0; i < infos.length; i++)
-    //     {
-    //         infos[i].style.display = "none";
-    //     }    
-    //     document.getElementById("skills").style.display = "block";
-    // }
-    // function inventory(){
-    //     var infos = document.getElementsByClassName("characterInfo");
-    //     for(let i = 0; i < infos.length; i++)
-    //     {
-    //         infos[i].style.display = "none";
-    //     }   
-    //     document.getElementById("inventory").style.display = "block";
-    // }
-    // function quests(){
-    //     var infos = document.getElementsByClassName("characterInfo");
-    //     for(let i = 0; i < infos.length; i++)
-    //     {
-    //         infos[i].style.display = "none";
-    //     }            
-    //     document.getElementById("quests").style.display = "block";
-    // }
-    // function journal(){
-    //     var infos = document.getElementsByClassName("characterInfo");
-    //     for(let i = 0; i < infos.length; i++)
-    //     {
-    //         infos[i].style.display = "none";
-    //     }            
-    //     document.getElementById("journal").style.display = "block";
-    // }
   </script>
 </html>
