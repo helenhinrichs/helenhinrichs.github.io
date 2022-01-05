@@ -1,6 +1,35 @@
 window.onscroll = function() {scrollFunction()};
+window.onresize = function(){chartAnimation()};
+
+function chartAnimation(){
+    let charts = document.getElementsByClassName("partCircle");
+    for(let i = 0; i < charts.length; i++)
+    {
+        if(isInViewport(charts[i], 100))
+        {
+            charts[i].style.animation = "progress 1s ease-in-out forwards";
+        }
+        else
+        {
+            charts[i].style.animation = "setZero 1s ease-in-out forwards";
+        }
+    }
+    charts = document.getElementsByClassName("skillLine");
+    for(let i = 0; i < charts.length; i++)
+    {
+        if(isInViewport(charts[i], 100))
+        {
+            charts[i].style.animation = "progress 1s ease-in-out forwards";
+        }
+        else
+        {
+            charts[i].style.animation = "setZero 1s ease-in-out forwards";
+        }
+    }
+}
 
 function scrollFunction() {
+    chartAnimation();
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         document.getElementById("header").classList.add("shrink");
         var children = document.getElementById("header").children;
@@ -16,36 +45,12 @@ function scrollFunction() {
             children[i].classList.remove("brighter");
         }
     }
-    let charts = document.getElementsByClassName("partCircle");
-    for(let i = 0; i < charts.length; i++)
-    {
-        if(isInViewport(charts[i]))
-        {
-            charts[i].style.animation = "progress 1s ease-in-out forwards";
-        }
-        else
-        {
-            charts[i].style.animation = "setZero 1s ease-in-out forwards";
-        }
-    }
-    charts = document.getElementsByClassName("skillLine");
-    for(let i = 0; i < charts.length; i++)
-    {
-        if(isInViewport(charts[i]))
-        {
-            charts[i].style.animation = "progress 1s ease-in-out forwards";
-        }
-        else
-        {
-            charts[i].style.animation = "setZero 1s ease-in-out forwards";
-        }
-    }
 } 
-function isInViewport(element) {
+function isInViewport(element, offset) {
     const rect = element.getBoundingClientRect();
     return (
-        (rect.bottom >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))||
-        (rect.top>= 0 && rect.top <= (window.innerHeight || document.documentElement.clientHeight))
+        (rect.bottom >= offset && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))||
+        (rect.top >= offset && rect.top <= (window.innerHeight || document.documentElement.clientHeight))
     );
 }
 function hoverCircle(obj)
