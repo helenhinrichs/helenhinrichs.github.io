@@ -53,16 +53,6 @@ function isInViewport(element, offset) {
         (rect.top >= offset && rect.top <= (window.innerHeight || document.documentElement.clientHeight))
     );
 }
-function hoverCircle(obj)
-{
-    console.log("hello");
-    obj.children[1].style.animation = "none";
-}
-function leaveCircle(obj)
-{
-    console.log("bye");
-    obj.children[1].style.animation = "progress 1s ease-in-out forwards";
-}
 function leaveHover(obj)
 {
     document.getElementById("header").classList.remove("headerSelect");
