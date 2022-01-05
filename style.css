@@ -160,7 +160,7 @@ h1,h2,h3{
       5% 100%
     );
 }
-.imageParent:hover> .questImage{
+.quest:hover>.imageParent> .questImage{
     transform: scale(1.2);
 }
 .questTitle{
@@ -220,6 +220,26 @@ h1,h2,h3{
     text-transform: uppercase;
     font-style: normal;
     font-size: 12px;
+}
+.questHeadContainer{
+    width: fit-content;
+}
+.questHeadContainer>h3{
+    margin: 16px 0px 0px 0px;
+    font-size: 24px;
+}
+.questHeadContainer>svg>line{
+    stroke-width:2;
+    stroke:#ffffff4D;
+}
+.questHeadContainer>svg{
+    transition: 0.6s;
+}
+.quest:hover>.questDescription> .questHeadContainer>svg{
+    width: 100%;
+}
+.questHeadContainer:hover>h3{
+    cursor: pointer;
 }
 .active{
     color: #81F785 !important;
