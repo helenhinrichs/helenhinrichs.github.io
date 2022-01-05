@@ -240,7 +240,6 @@ a{
     flex-wrap: wrap;
     flex-direction: row;
     justify-content:flex-start;
-    gap: 24px;
 }
 .otherSkill{
     width: 310px;
