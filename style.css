@@ -4,8 +4,8 @@ body{
     background: #15161F;
     color: white;
     font-family: 'Roboto Mono', monospace;
-    margin: none;
-    padding: none;
+    margin: 0;
+    padding: 0;
 }
 h1,h2,h3{
     text-align: center;
@@ -25,6 +25,17 @@ h1,h2,h3{
     column-gap: 24px;
     flex-wrap: wrap;
     max-width: 1040px;
+}
+.questContainer{
+    display: flex;
+    justify-content: center;
+    margin: 0px 200px 0px 200px;
+    /* flex-direction: row;
+    justify-content: space-between; 
+    column-gap: 24px;*/
+    flex-wrap: wrap;
+    max-width: 1040px;
+    min-width: 400px;
 }
 .pinkFill{
     stroke:#FF6C74 !important;
@@ -73,8 +84,38 @@ h1,h2,h3{
     overflow: hidden;
     height: fit-content;
 }
+.firstQuestImage{
+    clip-path: 
+    polygon(
+      0 0,
+      100% 0,
+      95% 100%,
+      0% 100%
+    ) !important;
+}
+.quest{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0px !important;
+    height: 228px;
+    overflow: hidden;
+    height: max-content;
+    min-height: 250px;
+    flex-basis: 100% !important;
+    min-width: 500px;
+    width: min-content;
+
+}
 #activeQuestDescription{
     grid-column-start: 1;
+    margin: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: fit-content;
+}
+.questDescription{
+    grid-column: auto / span 2;
     margin: 32px;
     display: flex;
     flex-direction: column;
@@ -95,12 +136,45 @@ h1,h2,h3{
     );
     border-radius: 0px 8px 8px 0px;
 }
+.questImage{
+    grid-column-start: auto;
+    grid-column-end: span 1;
+    margin: none;
+    background-image: url("Images/SF_snapshot.png");
+    background-size:cover;
+    clip-path: 
+    polygon(
+      0 0,
+      100% 0,
+      100% 100%,
+      5% 100%
+    );
+    border-radius: 0px 8px 8px 0px;
+}
 .questTitle{
     box-shadow: 0px 2px #81f78599;
 }
 #activeQuestDescription > h3{
     margin: 16px 0px;
     font-size: 24px;
+}
+.questDescription>h3{
+    margin: 16px 0px;
+    font-size: 24px;
+}
+.questDescription>svg>line{
+    stroke-width:2;
+    stroke:#ffffff4D
+}
+.questDescription>p{
+    font-weight: 400;
+    font-size: 16px;
+    color: #ffffff99;
+}
+.genre{
+    margin: 16px 0px;
+    font-weight: 500;
+    font-size: 16px;
 }
 #activeQuestDescription > p{
     margin: 16px 0px;
@@ -113,6 +187,11 @@ h1,h2,h3{
     padding: 8px 16px;
     margin: 16px 0px;
     font-weight: 500;
+    transition: 0.4s;
+}
+.button:hover{
+    background-color: #3946AF;
+    cursor: pointer;
 }
 #activeQuestHead{
     color: #81F785;
@@ -121,6 +200,18 @@ h1,h2,h3{
     text-transform: uppercase;
     font-style: normal;
     font-size: 12px;
+}
+.questHead{
+    color: #FFF;
+    font-weight:400;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    font-style: normal;
+    font-size: 12px;
+}
+.active{
+    color: #81F785 !important;
+    stroke:#81F785 !important;
 }
 .display
 {

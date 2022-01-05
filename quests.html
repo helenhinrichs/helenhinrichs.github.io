@@ -15,59 +15,60 @@
         <a href="quests.html"><div class="menuPoint selected" onmouseover="hover(this)" onmouseleave="leaveHover(this)" onclick="select(this)">Quests</div></a>
     </div>
     <div class="flexBox">
-        <div class="Box">
-            <!--<div class="tabs"> <button onclick="skills()">Skills</button><button onclick="inventory()">Inventory</button><button onclick="quests()">Quests</button><button onclick="journal()">Journal</button></div>*-->
-            <div class="subBox"> <img id="profileImage" src="Images/Heleen_small.svg"width= "331" alt="Helen Hinrichs"> </div>
-            <div class="description">
-                <div id="headline">    
-                    <h1>Helen Hinrichs</h1>
-                    <p>Game Programmer</p>
-                </div> 
-                <div id ="activeQuest" class="greyBox">
-                    <div id="activeQuestDescription">
-                        <div id="activeQuestHead">Active Quest</div>
-                        <h3>Symphonic Forest</h3>
-                        <svg height="2" width="168">
-                            <line x1="0" y1="0" x2="168" y2="0" style="stroke:#81f78599;stroke-width:2"/>
-                        </svg> 
-                        <p>Audio . Game</p>
-                        <div class="button">View Project</div>
-                    </div>
-                    <div id="activeQuestImage">
-                    </div>
+        <div class="questContainer">
+            <div class="quest greyBox">
+                <div class="questImage firstQuestImage">
                 </div>
-                <div class="greyBox">
-                    <h3>Main Skills</h3>
-                    <div id="skills">
-                        <div class="skill"><img class="skillImage" src="Images/keyboard_alt_black_24dp.svg"> 
-                            <p>Programming<br>Languages</p>
-                            <p class="skillList">C++, C#, JavaScript</p>
-                        </div>
-                        <div class="skill"><img class="skillImage" src="Images/sports_esports_black_24dp.svg"> 
-                            <p>Game<br>Programming</p>
-                            <p class="skillList">Unity, MonoGame, SFML</p>
-                        </div>
-                        <div class="skill"><img class="skillImage" src="Images/photo_black_24dp.svg"> 
-                            <p>Graphic<br>Programming</p>
-                            <p class="skillList">OpenGL(ES), OpenCV</p>
-                        </div>
-                    </div>
+                <div class="questDescription">
+                    <div class="questHead active">Active Quest</div>
+                    <h3>Symphonic Forest</h3>
+                    <svg height="2" width="168">
+                        <line x1="0" y1="0" x2="168" y2="0" class="active"/>
+                    </svg> 
+                    <div class="genre">Audio . Game</div>
+                    <p>In dem Spiel Symphonic Forest begleiten wir den mutigen Fuchs Clavis auf der Mission 
+                        seine Heimat zu retten: Denn der Wald, in dem er lebt, ist ein magischer Ort, dessen 
+                        Magie sich in Musik manifestiert. In ihm leben kleine, bunte Klanggeister (Sound Spirits), 
+                        die die Töne und somit die Melodien des Waldes in sich tragen. 
+                    </p>
+                    <div class="button">View Project</div>
                 </div>
-                <div id="contact" class="greyBox">
-                    <h3>Contact</h3>
-                    <div class="innerBox">
-                        <div class="circle"><img class="icon" src="Images/mail.svg" alt="Mail contact"></div>
-                        <div class="circle" onmousedown="clickButton(this)" onmouseup="releaseButton(this)">
-                            <a href="https://github.com/helenhinrichs" target="_blank">
-                                <img class="icon" src="Images/github.svg" alt="Mail contact">
-                            </a>
-                        </div>
-                        <div class="circle" onmousedown="clickButton(this)" onmouseup="releaseButton(this)">
-                            <a href="https://www.linkedin.com/in/helen-hinrichs-6200b9224/" target="_blank">
-                                <img class="icon" src="Images/linkedin.svg" alt="Mail contact">
-                            </a>
-                        </div>
-                    </div>
+            </div>
+            <div class="quest greyBox">
+                <div class="questDescription">
+                    <div class="questHead">Completed Quest</div>
+                    <h3>Symphonic Forest</h3>
+                    <svg height="2" width="168">
+                        <line x1="0" y1="0" x2="168" y2="0"/>
+                    </svg> 
+                    <div class="genre">Audio . Game</div>
+                    <p>In dem Spiel Symphonic Forest begleiten wir den mutigen Fuchs Clavis auf der Mission 
+                        seine Heimat zu retten: Denn der Wald, in dem er lebt, ist ein magischer Ort, dessen 
+                        Magie sich in Musik manifestiert. In ihm leben kleine, bunte Klanggeister (Sound Spirits), 
+                        die die Töne und somit die Melodien des Waldes in sich tragen. 
+                    </p>
+                    <div class="button">View Project</div>
+                </div>
+                <div class="questImage">
+                </div>
+            </div>
+            <div class="quest greyBox">
+                <div class="questDescription">
+                    <div class="questHead">Completed Quest</div>
+                    <h3>Symphonic Forest</h3>
+                    <svg height="2" width="168">
+                        <line x1="0" y1="0" x2="168" y2="0"/>
+                    </svg> 
+                    <div class="genre">Audio . Game</div>
+                    <p>In dem Spiel Symphonic Forest begleiten wir den mutigen Fuchs Clavis auf der Mission 
+                        seine Heimat zu retten: Denn der Wald, in dem er lebt, ist ein magischer Ort, dessen 
+                        Magie sich in Musik manifestiert. In ihm leben kleine, bunte Klanggeister (Sound Spirits), 
+                        die die Töne und somit die Melodien des Waldes in sich tragen. 
+                    </p>
+                    <div class="button">View Project</div>
+                </div>
+                <div class="questImage">
+                </div>
             </div>
         </div>
     </div>
