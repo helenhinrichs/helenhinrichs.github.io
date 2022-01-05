@@ -19,11 +19,12 @@ h1,h2,h3{
 }
 .skillContainer{
     display: flex;
-    margin: 125px 200px 0px 200px;
+    margin: 0px 200px 0px 200px;
     flex-direction: row;
     justify-content: space-between; 
-    gap: 24px;
+    column-gap: 24px;
     flex-wrap: wrap;
+    max-width: 1040px;
 }
 .pinkFill{
     stroke:#FF6C74 !important;
@@ -219,6 +220,16 @@ a{
     stroke-linecap: round;
     animation: progress 1s ease-in-out forwards;
 }
+@keyframes progress{
+    0% {
+        stroke-dasharray: 0 100;
+    }
+}
+@keyframes setZero{
+    100% {
+        stroke-dasharray: 0 100;
+    }
+}
 .line{
     stroke-width: 2.5px;
     stroke: #72737B;
@@ -244,15 +255,11 @@ a{
 }
 .skillLine{
     stroke: #81F785;
+    animation: progress 1s ease-in-out forwards;
 }
 .greyBox>h3{
     margin-bottom: 24px;
 }
-@keyframes progress {
-    0% {
-      stroke-dasharray: 0 100;
-    }
-  }
 .circleFun{
     display: flex;
     justify-content: center;

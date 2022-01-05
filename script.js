@@ -16,8 +16,48 @@ function scrollFunction() {
             children[i].classList.remove("brighter");
         }
     }
+    let charts = document.getElementsByClassName("partCircle");
+    for(let i = 0; i < charts.length; i++)
+    {
+        if(isInViewport(charts[i]))
+        {
+            charts[i].style.animation = "progress 1s ease-in-out forwards";
+        }
+        else
+        {
+            charts[i].style.animation = "setZero 1s ease-in-out forwards";
+        }
+    }
+    charts = document.getElementsByClassName("skillLine");
+    for(let i = 0; i < charts.length; i++)
+    {
+        if(isInViewport(charts[i]))
+        {
+            charts[i].style.animation = "progress 1s ease-in-out forwards";
+        }
+        else
+        {
+            charts[i].style.animation = "setZero 1s ease-in-out forwards";
+        }
+    }
 } 
-
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        (rect.bottom >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))||
+        (rect.top>= 0 && rect.top <= (window.innerHeight || document.documentElement.clientHeight))
+    );
+}
+function hoverCircle(obj)
+{
+    console.log("hello");
+    obj.children[1].style.animation = "none";
+}
+function leaveCircle(obj)
+{
+    console.log("bye");
+    obj.children[1].style.animation = "progress 1s ease-in-out forwards";
+}
 function leaveHover(obj)
 {
     document.getElementById("header").classList.remove("headerSelect");
