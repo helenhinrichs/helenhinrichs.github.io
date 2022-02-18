@@ -18,8 +18,11 @@
     margin-left: 20px;
   }
   .greyBox{
-    margin: 20px;
+    margin: 16px;
     margin-top: 0px;
+  }
+  .description{
+    width: 100vw;
   }
   #skillsBox > h3{
     margin: 0px;
@@ -100,9 +103,9 @@
     height: 150px;
     clip-path:
     polygon(
-      0 0,
-      100% 0,
-      100% 92%,
+      0% 0%,
+      100% 0%,
+      100% 94%,
       0% 100%
     )  !important;
   }
