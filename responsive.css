@@ -1,0 +1,65 @@
+@media screen and (max-width: 600px) {
+  body {
+  }
+  .Box {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .questImage {
+    background-position: unset;
+  }
+
+  #skillsBox,
+  #contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #skills {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .skill {
+    width: auto;
+  }
+
+  .profileImage {
+    display: flex;
+    justify-content: center;
+  }
+  #profileImage {
+    max-width: 40%;
+  }
+
+  .skillBox {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .quest {
+    display: flex;
+    flex-direction: column;
+    min-width: auto;
+  }
+
+  .imageParent {
+    height: 300px;
+    clip-path: none !important;
+  }
+
+  .firstQuestImage {
+    clip-path: none !important;
+  }
+
+  .imageParent .questImage {
+    background-size: auto;
+    background-position: center;
+    border-radius: unset;
+  }
+}

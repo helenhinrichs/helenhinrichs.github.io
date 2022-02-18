@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+
     <title>Helen Hinrichs - Portfolio</title>
     <script src="script.js"></script> 
 </head>
@@ -17,7 +19,7 @@
     <div class="flexBox">
         <div class="Box">
             <!--<div class="tabs"> <button onclick="skills()">Skills</button><button onclick="inventory()">Inventory</button><button onclick="quests()">Quests</button><button onclick="journal()">Journal</button></div>*-->
-            <div class="subBox"> <img id="profileImage" src="Images/Heleen_small.svg"width= "331" alt="Helen Hinrichs"> </div>
+            <div class="profileImage"> <img id="profileImage" src="Images/Heleen_small.svg"width= "331" alt="Helen Hinrichs"> </div>
             <div class="description">
                 <div id="headline">    
                     <h1>Helen Hinrichs</h1>
@@ -38,7 +40,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="greyBox">
+                <div id="skillsBox" class="greyBox">
                     <h3>Main Skills</h3>
                     <div id="skills">
                         <div class="skill"><img class="skillImage" src="Images/keyboard_alt_black_24dp.svg"> 
@@ -58,7 +60,9 @@
                 <div id="contact" class="greyBox">
                     <h3>Contact</h3>
                     <div class="innerBox">
-                        <div class="circle"><img class="icon" src="Images/mail.svg" alt="Mail contact"></div>
+                        <div class="circle">
+                            <a href= "mailto:abc@example.com"><img class="icon" src="Images/mail.svg" alt="Mail contact"></a>
+                        </div>
                         <div class="circle" onmousedown="clickButton(this)" onmouseup="releaseButton(this)">
                             <a href="https://github.com/helenhinrichs" target="_blank">
                                 <img class="icon" src="Images/github.svg" alt="Mail contact">
