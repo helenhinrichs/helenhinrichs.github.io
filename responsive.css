@@ -7,6 +7,11 @@
   .flexBox{
     margin-top: 64px;
   }
+  .questContainer{
+    width: 100vw;
+    min-width: 300px;
+    margin: 0px;
+  }
   .Box {
     display: flex;
     flex-direction: column;
