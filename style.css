@@ -30,9 +30,6 @@ h1,h2,h3{
     display: flex;
     justify-content: center;
     margin: 0px 200px 0px 200px;
-    /* flex-direction: row;
-    justify-content: space-between; 
-    column-gap: 24px;*/
     flex-wrap: wrap;
     max-width: 1040px;
     min-width: 400px;
@@ -137,17 +134,13 @@ h1,h2,h3{
     border-radius: 0px 8px 8px 0px;
 }
 .questImage{
-    /* grid-column-start: auto;
-    grid-column-end: span 1; */
     margin: none;
     background-image: url("Images/SF_snapshot.png");
     background-size:cover;
     border-radius: 0px 8px 8px 0px;
-    /* background-position:left; */
     background-position:center;
     transition: 0.8s;
     height: 100%;
-    /* transition-timing-function: ease; */
 }
 .imageParent{
     grid-column-start: auto;
@@ -237,9 +230,6 @@ h1,h2,h3{
 }
 .quest:hover>.questDescription> .questHeadContainer>svg{
     width: 100%;
-}
-.questHeadContainer:hover>h3{
-    cursor: pointer;
 }
 .active{
     color: #81F785 !important;
@@ -458,4 +448,8 @@ a{
 }
 .skillList{
     color: rgba(255, 255, 255, 0.6);
+}
+.heroImage{
+    z-index: 2;
+    size: 80vw;
 }

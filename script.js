@@ -17,7 +17,7 @@ function chartAnimation(){
     charts = document.getElementsByClassName("skillLine");
     for(let i = 0; i < charts.length; i++)
     {
-        if(isInViewport(charts[i], 100))
+        if(isInViewport(charts[i], 0))
         {
             charts[i].style.animation = "progress 1s ease-in-out forwards";
         }
@@ -80,4 +80,9 @@ function releaseButton(obj)
     console.log("release");
     obj.classList.remove("clickedCircle");
     obj.children[0].classList.remove("iconHighlight");
+}
+function makeHero(img)
+{
+    console.log("hello");
+    console.log(img.previousSibling.nodeName);
 }
