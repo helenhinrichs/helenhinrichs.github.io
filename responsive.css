@@ -1,12 +1,28 @@
 @media screen and (max-width: 600px) {
   body {
   }
+  #header{
+    padding-top: 10px;
+  }
+  .flexBox{
+    margin-top: 56px;
+  }
   .Box {
     display: flex;
     flex-direction: column-reverse;
   }
   .questImage {
     background-position: unset;
+  }
+  .greyBox > h3{
+    font-size: 20px;
+    margin-left: 20px;
+  }
+  .greyBox{
+    padding: 20px 0px;
+  }
+  .otherSkill{
+    margin-left: 20px;
   }
 
   #skillsBox,
