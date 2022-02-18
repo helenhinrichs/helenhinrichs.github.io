@@ -5,7 +5,7 @@
     padding-top: 10px;
   }
   .flexBox{
-    margin-top: 56px;
+    margin-top: 64px;
   }
   .Box {
     display: flex;
@@ -15,8 +15,22 @@
     background-position: unset;
   }
   .greyBox > h3{
-    font-size: 20px;
     margin-left: 20px;
+  }
+  .greyBox{
+    margin: 20px;
+    margin-top: 0px;
+  }
+  #skillsBox > h3{
+    margin: 0px;
+    margin-left: 20px;
+    align-self: flex-start;
+  }
+  #contact > h3{
+    margin: 0px;
+    margin-left: 20px;
+    align-self: flex-start;
+
   }
   .greyBox{
     padding: 20px 0px;
@@ -47,9 +61,13 @@
   text-align: center;
   }
   #headline>p{
-    font-size: 16px;
+    font-size: 20px;
     text-align: center;
-    }
+  }
+  #activeQuest{
+    display: flex;
+    flex-direction: column-reverse;
+  }
 
   .profileImage {
     display: flex;
@@ -57,16 +75,8 @@
   }
   #profileImage {
     object-fit: cover;
-    height: 246px; /* height of container */
-    object-position: 20px 0px; /* try 20px 10px */ 
-
-    /* clip-path:
-    polygon(
-      0 0,
-      100% 0,
-      100% 35%,
-      0% 35%
-    )  */
+    height: 246px;
+    object-position: 20px 0px;
   }
 
   .skillBox {
@@ -86,13 +96,24 @@
     height: 300px;
     clip-path: none !important;
   }
+  #activeQuest>.imageParent {
+    height: 150px;
+    clip-path:
+    polygon(
+      0 0,
+      100% 0,
+      100% 92%,
+      0% 100%
+    )  !important;
+  }
+
 
   .firstQuestImage {
     clip-path: none !important;
   }
 
   .imageParent .questImage {
-    background-size: auto;
+    background-size: fill;
     background-position: center;
     border-radius: unset;
   }
