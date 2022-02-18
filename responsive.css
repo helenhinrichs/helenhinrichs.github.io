@@ -12,6 +12,12 @@
     min-width: 300px;
     margin: 0px;
   }
+  .quest{
+    flex-direction: column-reverse !important;
+  }
+  #firstQuestBox{
+    flex-direction: column !important;
+  }
   .Box {
     display: flex;
     flex-direction: column;
@@ -101,11 +107,7 @@
   }
 
   .imageParent {
-    height: 300px;
-    clip-path: none !important;
-  }
-  #activeQuest>.imageParent {
-    height: 150px;
+    height: 200px;
     clip-path:
     polygon(
       0% 0%,
@@ -114,11 +116,14 @@
       0% 100%
     )  !important;
   }
-
-
-  .firstQuestImage {
-    clip-path: none !important;
+  #activeQuest>.imageParent {
+    height: 150px;
   }
+
+
+  /* .firstQuestImage {
+    clip-path: none !important;
+  } */
 
   .imageParent .questImage {
     background-size: fill;
