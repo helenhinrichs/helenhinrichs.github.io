@@ -4,6 +4,16 @@
   #header{
     padding-top: 10px;
   }
+  .menuPoint{
+    font-size: min(20px, 6vw);
+  }
+  .shrink{
+    padding-top: 0px !important;
+  }
+  .shrink>a>.menuPoint{
+    padding-top: 0px;
+    padding-bottom: 4px;
+  }
   .flexBox{
     margin-top: 64px;
   }

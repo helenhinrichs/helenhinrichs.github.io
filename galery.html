@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" type="image/png" href="Favicon/favicon16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="Favicon/favicon32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="Favicon/favicon96x96.png" sizes="96x96">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <title>Helen Hinrichs - Project Galery</title>
+    <script src="script.js"></script> 
+    <script src="galery.js"></script> 
+</head>
+<body>
+    <div id="header">
+        <a href="index.html"><div class="menuPoint" onmouseover="hover(this)" onmouseleave="leaveHover(this)" onclick="select(this)">Profile</div></a>
+        <a href="skills.html"><div class="menuPoint" onmouseover="hover(this)" onmouseleave="leaveHover(this)" onclick="select(this)">Skills</div></a>
+        <a href="quests.html"><div class="menuPoint " onmouseover="hover(this)" onmouseleave="leaveHover(this)" onclick="select(this)">Quests</div></a>
+    </div>
+    <div class="flexBox">
+        <div class="galeryContainer">
+            <div class="galeryHead">
+                <div id="headline">    
+                    <h1>Symphonic Forest</h1>
+                    <div class="genre">Audio . Game</div>
+                </div>
+            </div> 
+            <img class="arrow" onmouseover="hoverArrow(this)" onmouseleave="leaveArrow(this)" src="Images/arrow_back_black_24dp.svg"> 
+            <img class="galeryImage" src="Images/story0.png" alt="Symphonic Forest"> 
+            <img class="arrow flipped" onmouseover="hoverArrow(this)" onmouseleave="leaveArrow(this)" src="Images/arrow_back_black_24dp.svg"> 
+            <div class="greyBox propertyBox">
+                <div class="property"><div class="propertyName">Timeline:</div><div>01 2020 - 04 2020</div></div>
+                <div class="property"><div class="propertyName">Genre:</div><div>Audio Game</div></div>
+                <div class="property"><div class="propertyName">Team:</div><div>1 developer</div></div>
+                <div class="property"><div class="propertyName">Languages:</div><div>C#</div></div>
+                <div class="property"><div class="propertyName">My role:</div><div>programmer</div></div>
+                <div class="property"><div class="propertyName">Engine:</div><div>Monogame</div></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

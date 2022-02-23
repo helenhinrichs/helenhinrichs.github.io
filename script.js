@@ -81,8 +81,3 @@ function releaseButton(obj)
     obj.classList.remove("clickedCircle");
     obj.children[0].classList.remove("iconHighlight");
 }
-function makeHero(img)
-{
-    console.log("hello");
-    console.log(img.previousSibling.nodeName);
-}
