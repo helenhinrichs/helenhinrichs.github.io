@@ -7,81 +7,23 @@
     
     <link rel="icon" type="image/png" href="Favicon/favicon16x16.png" sizes="16x16">
     <link rel="icon" type="image/png" href="Favicon/favicon32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="Favicon/favicon64x64.png" sizes="64x64">
     <link rel="icon" type="image/png" href="Favicon/favicon96x96.png" sizes="96x96">
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
     <title>Helen Hinrichs - Quests</title>
     <script src="script.js"></script> 
+    <script src="galery.js"></script> 
 </head>
-<body>
+<body onload="displayProjectPreviews(false)">
     <div id="header">
         <a href="index.html"><div class="menuPoint" onmouseover="hover(this)" onmouseleave="leaveHover(this)" onclick="select(this)">Profile</div></a>
         <a href="skills.html"><div class="menuPoint" onmouseover="hover(this)" onmouseleave="leaveHover(this)" onclick="select(this)">Skills</div></a>
         <a href="quests.html"><div class="menuPoint selected" onmouseover="hover(this)" onmouseleave="leaveHover(this)" onclick="select(this)">Quests</div></a>
     </div>
     <div class="flexBox">
-        <div class="questContainer">
-            <div class="quest greyBox" id="firstQuestBox">
-                <div class="imageParent firstQuestImage">
-                    <div class="questImage">
-                    </div>
-                </div>
-                <div class="questDescription">
-                    <div class="questHeadContainer">
-                        <div class="questHead active">Active Quest</div>
-                        <h3>Symphonic Forest</h3>
-                        <svg height="2" width="50%">
-                            <line x1="0" y1="0" x2="50%" y2="0" class="active"/>
-                        </svg> 
-                    </div>
-                    <div class="genre">Audio . Game</div>
-                    <p>In dem Spiel Symphonic Forest begleiten wir den mutigen Fuchs Clavis auf der Mission 
-                        seine Heimat zu rette...
-                    </p>
-                    <a href="galery.html"><div class="button">View Project</div></a>
-                </div>
-            </div>
-            <div class="quest greyBox">
-                <div class="questDescription">
-                    <div class="questHeadContainer">
-                        <div class="questHead">Completed Quest</div>
-                        <h3>Symphonic Forest</h3>
-                        <svg height="2" width="50%">
-                            <line x1="0" y1="0" x2="50%" y2="0"/>
-                        </svg> 
-                    </div>
-                    <div class="genre">Audio . Game</div>
-                    <p>In dem Spiel Symphonic Forest begleiten wir den mutigen Fuchs Clavis auf der Mission 
-                        seine Heimat zu rette...
-                    </p>
-                    <a href="galery.html"><div class="button">View Project</div></a>
-                </div>
-                <div class="imageParent">
-                    <div class="questImage">
-                    </div>
-                </div>
-            </div>
-            <div class="quest greyBox">
-                <div class="questDescription">
-                    <div class="questHeadContainer">
-                        <div class="questHead">Completed Quest</div>
-                        <h3>Symphonic Forest</h3>
-                        <svg height="2" width="50%">
-                            <line x1="0" y1="0" x2="50%" y2="0"/>
-                        </svg> 
-                    </div>
-                    <div class="genre">Audio . Game</div>
-                    <p>In dem Spiel Symphonic Forest begleiten wir den mutigen Fuchs Clavis auf der Mission 
-                        seine Heimat zu rette...
-                    </p>
-                    <div class="button">View Project</div>
-                </div>
-                <div class="imageParent">
-                    <div class="questImage">
-                    </div>
-                </div>
-            </div>
+        <div id="questContainer">
         </div>
     </div>
 </body>

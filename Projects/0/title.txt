@@ -1,0 +1,8 @@
+Justified of Noodles
+run, shoot, eat
+01 2020 - 04 2020
+Pasta Shooter
+2 developers, 4 artists
+C#
+programming
+Unity

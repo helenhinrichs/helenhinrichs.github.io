@@ -7,18 +7,17 @@
 
     <link rel="icon" type="image/png" href="Favicon/favicon16x16.png" sizes="16x16">
     <link rel="icon" type="image/png" href="Favicon/favicon32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="Favicon/favicon64x64.png" sizes="64x64">
     <link rel="icon" type="image/png" href="Favicon/favicon96x96.png" sizes="96x96">
-    <!-- <link rel="apple-touch-icon" sizes="72x72" href="favicon72x72.png" >
-    <link rel="apple-touch-icon" sizes="114x114" href="favicon114x114.png" >
-    <link rel="apple-touch-icon" sizes="152x152" href="favicon152x152.png" > -->
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
 
     <title>Helen Hinrichs - Portfolio</title>
     <script src="script.js"></script> 
+    <script src="galery.js"></script> 
 </head>
-<body>
+<body onload="displayProjectPreviews(true)">
     <div id="header">
         <a href="index.html"><div class="menuPoint selected" onmouseover="hover(this)" onmouseleave="leaveHover(this)" onclick="select(this)">Profile</div></a>
         <a href="skills.html"><div class="menuPoint" onmouseover="hover(this)" onmouseleave="leaveHover(this)" onclick="select(this)">Skills</div></a>
@@ -27,26 +26,11 @@
     <div class="flexBox">
         <div class="Box">
             <div class="profileImage"> <img id="profileImage" src="Images/Heleen_small.svg"width= "331" alt="Helen Hinrichs"> </div>
-            <div class="description">
+            <div id="description">
                 <div id="headline">    
                     <h1>Helen Hinrichs</h1>
                     <p>Game Programmer</p>
                 </div> 
-                <div id ="activeQuest" class="greyBox">
-                    <div id="activeQuestDescription">
-                        <div id="activeQuestHead">Active Quest</div>
-                        <h3>Symphonic Forest</h3>
-                        <svg height="2" width="168">
-                            <line x1="0" y1="0" x2="168" y2="0" style="stroke:#81f78599;stroke-width:2"/>
-                        </svg> 
-                        <p>Audio . Game</p>
-                        <div class="button">View Project</div>
-                    </div>
-                    <div class="imageParent">
-                        <div class="questImage" style="background-image: url('Images/SF_snapshot1.png') !important;">
-                        </div>
-                    </div>
-                </div>
                 <div id="skillsBox" class="greyBox">
                     <h3>Main Skills</h3>
                     <div id="skills">

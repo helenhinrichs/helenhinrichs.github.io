@@ -17,7 +17,7 @@
   .flexBox{
     margin-top: 64px;
   }
-  .questContainer{
+  #questContainer{
     width: 100vw;
     min-width: 300px;
     margin: 0px;
@@ -42,7 +42,7 @@
     margin: 16px;
     margin-top: 0px;
   }
-  .description{
+  #description{
     width: 100vw;
   }
   #skillsBox > h3{
@@ -139,5 +139,11 @@
     background-size: fill;
     background-position: center;
     border-radius: unset;
+  }
+  .propertyBox{
+    grid-template-columns: 1fr;
+  }
+  .projectPageText{
+    padding: 32px;
   }
 }

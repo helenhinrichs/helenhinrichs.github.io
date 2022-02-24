@@ -1,0 +1,8 @@
+Magnes
+jump, run, stick
+01 2020 - 04 2020
+Jump 'n' Run
+3 developers, 4 artists
+C#
+programming
+Unity

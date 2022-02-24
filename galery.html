@@ -7,6 +7,7 @@
     
     <link rel="icon" type="image/png" href="Favicon/favicon16x16.png" sizes="16x16">
     <link rel="icon" type="image/png" href="Favicon/favicon32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="Favicon/favicon64x64.png" sizes="64x64">
     <link rel="icon" type="image/png" href="Favicon/favicon96x96.png" sizes="96x96">
 
     <link rel="stylesheet" href="style.css">
@@ -15,15 +16,15 @@
     <script src="script.js"></script> 
     <script src="galery.js"></script> 
 </head>
-<body>
+<body onload="displayProjectPage(0)">
     <div id="header">
         <a href="index.html"><div class="menuPoint" onmouseover="hover(this)" onmouseleave="leaveHover(this)" onclick="select(this)">Profile</div></a>
         <a href="skills.html"><div class="menuPoint" onmouseover="hover(this)" onmouseleave="leaveHover(this)" onclick="select(this)">Skills</div></a>
         <a href="quests.html"><div class="menuPoint " onmouseover="hover(this)" onmouseleave="leaveHover(this)" onclick="select(this)">Quests</div></a>
     </div>
     <div class="flexBox">
-        <div class="galeryContainer">
-            <div class="galeryHead">
+        <div id="galeryContainer">
+            <!-- <div id="galeryHead">
                 <div id="headline">    
                     <h1>Symphonic Forest</h1>
                     <div class="genre">Audio . Game</div>
@@ -39,7 +40,7 @@
                 <div class="property"><div class="propertyName">Languages:</div><div>C#</div></div>
                 <div class="property"><div class="propertyName">My role:</div><div>programmer</div></div>
                 <div class="property"><div class="propertyName">Engine:</div><div>Monogame</div></div>
-            </div>
+            </div> -->
         </div>
     </div>
 </body>
