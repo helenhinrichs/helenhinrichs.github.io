@@ -39,7 +39,7 @@
     margin-left: 20px;
   }
   .greyBox{
-    margin: 16px;
+    margin: 32px;
     margin-top: 0px;
   }
   #description{
@@ -142,8 +142,16 @@
   }
   .propertyBox{
     grid-template-columns: 1fr;
+    margin: 0px;
+    margin-bottom: 16px;
   }
   .projectPageText{
     padding: 32px;
+    margin: 0px;
+    margin-bottom: 16px;
+  }
+  .arrow{
+    width: 32px;
+    height: 32px;
   }
 }
