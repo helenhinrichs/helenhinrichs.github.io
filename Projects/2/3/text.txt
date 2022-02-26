@@ -1,0 +1,9 @@
+<h2 style="text-align: left;">Challenges</h2>
+<br>
+ <ul>
+  <li>Getting to know Monogame</li>
+  <li>Implementing parallax scroll (wasn't that hard actually)</li>
+  <li>Organize a lot of classes without knowing about software design patterns</li>
+  <li>Programming a "synthesizer" which plays melodies without losing the timing</li>
+  <li>Checking exactly timed collisions to tell right and wrong notes apart</li>
+</ul> 

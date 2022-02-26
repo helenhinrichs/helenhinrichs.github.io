@@ -1,8 +1,2 @@
 Symphonic Forest
-jump, collect, listen
-01 2020 - 04 2020
-Audio Game
-1 developer
-C#
-programming, music, graphics
-Monogame
+MusicGame, C#, Monogame

@@ -1,4 +1,8 @@
-Pesto gegen Tomatensoße
-
-Kämpfe mit einer Makkaroni um dein Leben, doch hüte dich vor Regen, denn wie jeder weiß kann man mit einer nassen Nudel nicht schießen. 
-Wenn du den anderen Spieler getötet hast, geht die Runde an dich, nach 3 Runden ist das Spiel entschieden. Wer gewinnt?!
+<div class="propertyBox">
+    <div class="property"><div class="propertyName">Timeline:</div><div>06 11 - 08 11 2020</div></div>
+    <div class="property"><div class="propertyName">Genre:</div><div>Pasta Shooter</div></div>
+    <div class="property"><div class="propertyName">Team:</div><div>2 programmers, 4 artists</div></div>
+    <div class="property"><div class="propertyName">Languages:</div><div>C#</div></div>
+    <div class="property"><div class="propertyName">My role:</div><div>programming</div></div>
+    <div class="property"><div class="propertyName">Engine:</div><div>Unity</div></div>
+</div>

@@ -1,1 +1,2 @@
-Hihi
+<br>An "anti" music game where you play a little flying devil who wants to disturb the music by
+shooting notes off their tracks. The game can read midis from xml files to play custom music pieces.

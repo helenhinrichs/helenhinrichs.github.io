@@ -1,10 +1,8 @@
-In dem Spiel Symphonic Forest begleiten wir den mutigen Fuchs Clavis auf der Mission seine Heimat zu retten: Denn der Wald, in dem er lebt, ist ein magischer Ort, dessen Magie sich in Musik manifestiert. In ihm leben kleine, bunte Klanggeister (Sound Spirits), die die Töne und somit die Melodien des Waldes in sich tragen. 
-
-Doch ein tragisches Schicksal taucht den Wald in Dunkelheit, die die Klanggeister gefangen nimmt und somit Klänge und Musik aus dem Wald verbannt. Die Musik ist verschwunden. Es ist dunkel und still geworden. Nun ist es an Clavis, die Töne wieder zu befreien. 
-
-In der Nähe der dunklen Schatten kann man die gefangenen Töne ihre Melodien singen hören. Werden diese mithilfe der bereits befreiten Töne im richtigen Rhythmus und Tempo nachgespielt, kann so nach und nach die Dunkelheit vertrieben und weitere Klanggesiter befreit werden. Um dies zu erreichen, muss der*die Spieler*in genau hinhören und die Töne strategisch so im Raum platzieren, dass innerhalb der Melodie nebeneinander liegende Töne, leicht erreicht werden können. Dabei ist es gar nicht immer so einfach, das richtige Timing zu erwischen. Doch es herrscht kein Zeitdruck. Wie beim Erlernen eines Instruments ist es ok, Fehler zu machen. Um die Melodien richtig spielen zu lernen, verlangt es nur etwas Geduld, Konzentration und Übung. 
-Ziel des Spiels ist es, alle Klanggeister zu befreien und somit den Wald zu retten.
-
-Dadurch, dass keine ablaufende Stoppuhr der*dem Spieler*in Druck macht, bleibt zudem genug Zeit zwischen den Rätseln einfach mal frei zu improvisieren und mit den Tönen zu spielen. Besonders die Möglichkeit, die Bewegung des Fuchses zu loopen, lädt zum Herumprobieren und Experimentieren ein. 
-
-Das Spiel ist ein Sidescroller mit Parallax-Background, der nach jedem gelösten Musikrätsel etwas heller wird. Zusätzlich bekommt der*die Spieler*in auditives Feedback, indem immer mehr Tonspuren zu der Hintergrundmusik hinzukommen. Clavis wird über die Tastatur gesteuert. In der neuen, verbesserten Version des Spiels gibt es einen Hilfsmodus im Inventar, der die momentan gespielte Melodie durch aufleuchtende Töne leichter „lesbar“ macht.
+<div class="propertyBox">
+    <div class="property"><div class="propertyName">Timeline:</div><div>04 - 06 2021</div></div>
+    <div class="property"><div class="propertyName">Genre:</div><div>Audio Game, Puzzle</div></div>
+    <div class="property"><div class="propertyName">Team:</div><div>1 developer</div></div>
+    <div class="property"><div class="propertyName">Languages:</div><div>C#</div></div>
+    <div class="property"><div class="propertyName">My role:</div><div>programming, sound, graphics</div></div>
+    <div class="property"><div class="propertyName">Engine:</div><div>Monogame</div></div>
+</div>

@@ -1,4 +1,8 @@
-A little robot sent to space returns to his homeland to find it in ruins overruled by evil robots, 
-who are omnipresent forces responsible for its destruction. They have made the earth into an inhabitable cataclysmic decline. 
-The robot has to battle environmental ruin, technological control, and oppression, having magnetic abilities, which enable him 
-to stick to surfaces and overcome different types of obstacles. His goal is to reach a safe land and find peace.
+<div class="propertyBox">
+    <div class="property"><div class="propertyName">Timeline:</div><div>23 04 - 25 04 2021</div></div>
+    <div class="property"><div class="propertyName">Genre:</div><div>Jump 'n' Run</div></div>
+    <div class="property"><div class="propertyName">Team:</div><div>3 programmers, 4 artists</div></div>
+    <div class="property"><div class="propertyName">Languages:</div><div>C#</div></div>
+    <div class="property"><div class="propertyName">My role:</div><div>programming</div></div>
+    <div class="property"><div class="propertyName">Engine:</div><div>Unity</div></div>
+</div>

@@ -12,6 +12,7 @@ class projectData{
         this.imagePath = imagePath;
         this.description = description;
         this.tags = "";
+        this.isVideo = false;
     }
     addInfo(info)
     {
@@ -46,7 +47,6 @@ function leaveArrow(obj)
 }
 async function loadProjectData(folderName)
 {
-    console.log(sessionStorage.getItem("projects"));
     if(!sessionStorage.getItem("projects"))
     {
         let success = true;
@@ -84,30 +84,46 @@ async function loadProjectData(folderName)
                     for(let j = 0; pageSuccess; j++)
                     {
                         pageSuccess = false;
+                        let isVideo = false;
                         let description = folderName + '/' + i +'/' + j + '/text.txt';
-                        let pageImagePath = folderName + '/' + i +'/' + j + '/image.png';
-                        console.log(pageImagePath);
-                        await fetch(description)
-                            .then(function(response) {
-                            if (response.ok) {
-                                pageSuccess = true;
-                                response = response.text()
-                                .then(data => {
-                                        projects[i].pages.push(new projectPage(pageImagePath, data));
-                                    });
+                        if(imageExists(description))
+                        {
+                            let pageImagePath = folderName + '/' + i +'/' + j + '/image.png';
+                            if(!imageExists(pageImagePath)){
+                                pageImagePath = folderName + '/' + i +'/' + j + '/video.mp4';
+                                isVideo = true;
                             }
-                        });
+                            await fetch(description)
+                                .then(function(response) {
+                                if (response.ok) {
+                                    pageSuccess = true;
+                                    response = response.text()
+                                    .then(data => {
+                                            projects[i].pages.push(new projectPage(pageImagePath, data));
+                                            projects[i].pages[j].isVideo = isVideo;
+                                        });
+                                    }
+                            });
+                        }
                     }
                 }
         }
-        projects.forEach(element => console.log(element.title));
-        console.log("store session");
         sessionStorage.setItem("projects", JSON.stringify(projects));
     }
     else{
         projects = JSON.parse(sessionStorage.getItem("projects"));
-        console.log("already stored")
     }
+}
+//stolen from here: https://stackoverflow.com/questions/18837735/check-if-image-exists-on-server-using-javascript
+function imageExists(image_url){
+
+    var http = new XMLHttpRequest();
+
+    http.open('HEAD', image_url, false);
+    http.send();
+
+    return http.status != 404;
+
 }
 async function displayProjectPreviews(isStartPage){
     // if(sessionStorage.getItem("projects"))
@@ -118,11 +134,9 @@ async function displayProjectPreviews(isStartPage){
     if(projects.length == 0)
     {
         await loadProjectData("Projects");
-        console.log("load projects");
     }
     if(!isStartPage)
     {
-        console.log("load quest page");
         let box = document.getElementById("questContainer");
         box.innerHTML = "";
         for(let i = projects.length-1; i >= 0; i--)
@@ -179,7 +193,6 @@ async function displayProjectPreviews(isStartPage){
     else
     {
         let project = projects[projects.length-1];
-        console.log("load start page");
         let headline = document.getElementById("headline");
         projectPreview = document.createElement("div");
         projectPreview.classList.add("greyBox");
@@ -199,45 +212,51 @@ async function displayProjectPreviews(isStartPage){
                 </div>
             </div>`
         headline.after(projectPreview);
-        console.log("preview image path: " + project.imagePath )
     }
 }
 async function displayProjectPage(pageIndex){
     if(projects.length == 0)
     {
         await loadProjectData("Projects");
-        console.log("load projects");
     }
-        console.log("load galery");
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
         
         let index =  urlParams.get("index");//sessionStorage.getItem("projectIndex");
-        console.log(projects[index].pages.length + " pages");
-        console.log("project index is " + index);
         let box = document.getElementById("galeryContainer");
-        console.log(projects[index].pages[pageIndex].imagePath);
         box.innerHTML =
         `<div id="galeryHead">
-                <div id="headline">    
+                <div id="headline">
+                    <a href="galery.html?index=`+((index>0)?(index-1) : (projects.length-1))+`">
+                        <img class="arrow" onmouseover="hoverArrow(this)" onmouseleave="leaveArrow(this)" src="Images/arrow_back_black_24dp.svg">
+                    </a>
                     <h1>`+projects[index].title+`</h1>
-                    <div class="genre">`+projects[index].tags+`</div>
+                    <a href="galery.html?index=`+((index<projects.length-1)? (parseInt(index,10)+1) : 0) +`">
+                        <img class="arrow flipped" onmouseover="hoverArrow(this)" onmouseleave="leaveArrow(this)" src="Images/arrow_back_black_24dp.svg">
+                    </a>
                 </div>
-            </div> 
-            `+ ((pageIndex > 0 )? `<img class="arrow" onmouseover="hoverArrow(this)" onmouseleave="leaveArrow(this)" onclick="displayProjectPage(`+(pageIndex-1)+`)" src="Images/arrow_back_black_24dp.svg"> `:``)+
-            `<img class="galeryImage" src="`+ projects[index].pages[pageIndex].imagePath+`" alt="Symphonic Forest"> 
-            `+ ((pageIndex < projects[index].pages.length -1 )? `<img class="arrow flipped" onmouseover="hoverArrow(this)" onmouseleave="leaveArrow(this)"onclick="displayProjectPage(`+(pageIndex+1)+`)"src="Images/arrow_back_black_24dp.svg"> `:``)
-            +`<div class="greyBox projectPageText">
-                <div>`+ projects[index].pages[pageIndex].description +`</div>
-            </div>
-            <div class="greyBox propertyBox">
-                <div class="property"><div class="propertyName">Timeline:</div><div>`+projects[index].timeLine+`</div></div>
-                <div class="property"><div class="propertyName">Genre:</div><div>`+projects[index].genre+`</div></div>
-                <div class="property"><div class="propertyName">Team:</div><div>`+projects[index].team+`</div></div>
-                <div class="property"><div class="propertyName">Languages:</div><div>`+projects[index].languages+`</div></div>
-                <div class="property"><div class="propertyName">My role:</div><div>`+projects[index].role+`</div></div>
-                <div class="property"><div class="propertyName">Engine:</div><div>`+projects[index].engine+`</div></div>
-            </div>`
+                <div class="genre">`+projects[index].tags+`</div>
+            </div>`;
+            for(i = 0; i < projects[index].pages.length; i++)
+            { 
+                if( projects[index].pages[i].isVideo)
+                {
+                    box.innerHTML +=`<video controls class="galeryImage"> <source src="`+ projects[index].pages[i].imagePath+`" type="video/mp4">
+                    Your browser does not support the video tag.
+                    </video>`;
+                }
+                else
+                {
+                    box.innerHTML +=`<img class="galeryImage" src="`+ projects[index].pages[i].imagePath+`" alt="Symphonic Forest">`;
+                }
+                box.innerHTML += `<div class="greyBox projectPageText">
+                                <div>`+ projects[index].pages[i].description +`</div>`
+                
+            }
+            box.innerHTML += `</div>`;
+
+            // `+ ((index > 0 )? `<img class="arrow" onmouseover="hoverArrow(this)" onmouseleave="leaveArrow(this)" onclick="displayProjectPage(`+(pageIndex-1)+`)" src="Images/arrow_back_black_24dp.svg"> `:``)
+            // + ((index < projects.length -1 )? `<img class="arrow flipped" onmouseover="hoverArrow(this)" onmouseleave="leaveArrow(this)"onclick="displayProjectPage(`+(pageIndex+1)+`)"src="Images/arrow_back_black_24dp.svg"> `:``)
             
 }
 function wrap(element)

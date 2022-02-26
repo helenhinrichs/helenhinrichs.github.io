@@ -1,0 +1,6 @@
+<h2 style="text-align: left;">About the project</h2>
+<br>
+In the second semester at the University of Applied Science Salzburg I had the pleasure to build my first game.<br>
+Because I love music and composing as well as nature, I decided to combine these topics.<br>
+I wanted to create a game which enables the player to play music in real time and make this as challenging 
+as playing real music instruments. But it should be even more important to listen carefully to the melodies around you to replay it later.

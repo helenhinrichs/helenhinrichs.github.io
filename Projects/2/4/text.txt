@@ -1,0 +1,8 @@
+<h2 style="text-align: left;">Most Important Learnings</h2>
+<br>
+Besides learning to use <i>a lot</i> of tools like Photoshop, Illustrator and After Effects,
+I improved my programming workflow a lot:<br>
+I learned how to organize myself, divide problems into little pieces to master even the big ones, and how valuable 
+well-structured code can be. 
+<br><br>
+You can imagine my excitement about learning software design patterns in the following semester!

@@ -1,0 +1,7 @@
+<h2 style="text-align: left;">My role in the project</h2>
+<br>
+Because you build your game in the 2nd semester all on your own without having other teammates, I was programming,
+composing, mixing audio, creating assets and animations. (Besides the main character.) I could have
+used free assets from the internet. But on one hand sometimes it needs more time to find graphics and sounds matching exactly 
+what you imagine than creating them on your own and on the other hand I am always excited to achieve new skills in various areas by
+learning to use new tools. At the same time creating assets makes me relax so I can focus better when I get back to programming.

@@ -1,4 +1,12 @@
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1200px) {
+  #galeryContainer{
+    width: 80vw;
+  }
+  #questContainer{
+    width: 80vw;
+  }
+}
+@media screen and (max-width: 600px) {/*vorher 600px*/
   body {
   }
   #header{
@@ -6,6 +14,8 @@
   }
   .menuPoint{
     font-size: min(20px, 6vw);
+    padding-right: 16px;
+    padding-left: 16px;
   }
   .shrink{
     padding-top: 0px !important;
@@ -18,9 +28,15 @@
     margin-top: 64px;
   }
   #questContainer{
+    width: 90vw;
+  }
+  .galeryImage{
+    /* width: min(862px, 80vw); */
+    margin: 5vw 0px;
+  }
+  .skillContainer{
     width: 100vw;
-    min-width: 300px;
-    margin: 0px;
+    justify-content: center;
   }
   .quest{
     flex-direction: column-reverse !important;
@@ -80,9 +96,15 @@
     width: auto;
   }
 
+  #headline{
+    justify-content: space-between;
+    margin: 0px;
+  }
+
   #headline>h1{
-  font-size: 34px;
-  text-align: center;
+    font-size: 34px;
+    text-align: center;
+    margin: 0px;
   }
   #headline>p{
     font-size: 20px;
@@ -140,6 +162,9 @@
     background-position: center;
     border-radius: unset;
   }
+  .property{
+    grid-template-columns: 1fr 1fr;
+  }
   .propertyBox{
     grid-template-columns: 1fr;
     margin: 0px;
@@ -147,11 +172,12 @@
   }
   .projectPageText{
     padding: 32px;
-    margin: 0px;
-    margin-bottom: 16px;
   }
   .arrow{
     width: 32px;
     height: 32px;
+  }
+  #galeryContainer{
+    width: 90vw;
   }
 }

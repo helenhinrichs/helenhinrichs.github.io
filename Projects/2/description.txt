@@ -1,1 +1,2 @@
-Hihi
+<br>A sidescroller game in which you help the fox Clavis save his forest home. 
+You have to replay melodies you've heard by placing notes and jumping on them with the right timing.

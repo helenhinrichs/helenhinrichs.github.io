@@ -1,8 +1,2 @@
 Gegen Elise
-fly, shoot, laugh
-01 2020 - 04 2020
-Audio Game
-2 developers
-C++
-programming, sound, graphics
-custom build engine
+MusicGame, C++, own engine

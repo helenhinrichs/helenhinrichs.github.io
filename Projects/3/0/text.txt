@@ -1,8 +1,8 @@
-<h2 style="text-align: left;">Eine anti-musikalische Kompensation</h2>
-<br>
-Wer kennt es nicht? Man sitzt in der Klavierstunde und schämt sich. 
-Zu Hause hatte doch alles noch so gut geklappt! Und jetzt? Ein Desaster! Jeder 2. Ton geht daneben. Das kann doch nicht deine Schuld sein.
-Du hast ja sicher jeden Tag stundenlang fleißig geübt!
-Schuld ist natürlich der kleine Tastenteufel! 
-Frag mich nicht, warum, aber aus irgendeinem Grund macht dem kleinen Drachenvieh nichts mehr Spaß, als anderen die Musik zu verderben. Er liebt es, mit seinen Feuerbällen die Töne aus ihrer Bahn zu werfen und ist dabei so klein, dass er nie von irgendwem bemerkt wird. Ach ist das schön, wenn dann alles krumm und schief klingt, wenn die Klavierlehrerin schimpft und der Schüler zuerst stark ins Schwitzen kommt und schließlich als kleines Nervenbündel auf dem Klavierhocker zusammenklappt. Die reinste Freude für den gelben Unhold.
-Und der darfst nun endlich mal du sein! Denn die andere Seite kriegt nicht nur keinen Ärger ab, sondern hat beudetend mehr Spaß bei der Sache! ;-)
+<div class="propertyBox">
+    <div class="property"><div class="propertyName">Timeline:</div><div>31 01 - 11 02 2022</div></div>
+    <div class="property"><div class="propertyName">Genre:</div><div>Audio Game, Music Shooter</div></div>
+    <div class="property"><div class="propertyName">Team:</div><div>2 developers</div></div>
+    <div class="property"><div class="propertyName">Languages:</div><div>C++</div></div>
+    <div class="property"><div class="propertyName">My role:</div><div>programming, sound, graphics</div></div>
+    <div class="property"><div class="propertyName">Engine:</div><div>Custom build engine</div></div>
+</div>
