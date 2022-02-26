@@ -95,7 +95,7 @@ h1,h2,h3{
 }
 .quest{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 2fr;
     padding: 0px !important;
     height: 228px;
     overflow: hidden;
@@ -482,7 +482,10 @@ a{
     grid-row: 3; */
     grid-area: 4 / 2 / 5 / 3;
     margin: 0px;
-    width: min(862px, 80vw) - 16px;
+    width: min(862px, 80vw);
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
 }
 .projectPageText
 {

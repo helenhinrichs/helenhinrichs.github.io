@@ -224,10 +224,10 @@ async function displayProjectPage(pageIndex){
                     <div class="genre">`+projects[index].tags+`</div>
                 </div>
             </div> 
-            <img class="arrow"`+ ((pageIndex > 0 )? `onmouseover="hoverArrow(this)" onmouseleave="leaveArrow(this)" onclick="displayProjectPage(`+(pageIndex-1)+`)"`:``) +`src="Images/arrow_back_black_24dp.svg"> 
-            <img class="galeryImage" src="`+ projects[index].pages[pageIndex].imagePath+`" alt="Symphonic Forest"> 
-            <img class="arrow flipped"`+ ((pageIndex < projects[index].pages.length -1 )? `onmouseover="hoverArrow(this)" onmouseleave="leaveArrow(this)"onclick="displayProjectPage(`+(pageIndex+1)+`)"`:``) +`src="Images/arrow_back_black_24dp.svg"> 
-            <div class="greyBox projectPageText">
+            `+ ((pageIndex > 0 )? `<img class="arrow" onmouseover="hoverArrow(this)" onmouseleave="leaveArrow(this)" onclick="displayProjectPage(`+(pageIndex-1)+`)" src="Images/arrow_back_black_24dp.svg"> `:``)+
+            `<img class="galeryImage" src="`+ projects[index].pages[pageIndex].imagePath+`" alt="Symphonic Forest"> 
+            `+ ((pageIndex < projects[index].pages.length -1 )? `<img class="arrow flipped" onmouseover="hoverArrow(this)" onmouseleave="leaveArrow(this)"onclick="displayProjectPage(`+(pageIndex+1)+`)"src="Images/arrow_back_black_24dp.svg"> `:``)
+            +`<div class="greyBox projectPageText">
                 <div>`+ projects[index].pages[pageIndex].description +`</div>
             </div>
             <div class="greyBox propertyBox">
