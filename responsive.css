@@ -6,7 +6,7 @@
     width: 80vw;
   }
 }
-@media screen and (max-width: 600px) {/*vorher 600px*/
+@media screen and (max-width: 600px) {
   body {
   }
   #header{
@@ -31,7 +31,6 @@
     width: 90vw;
   }
   .galeryImage{
-    /* width: min(862px, 80vw); */
     margin: 5vw 0px;
   }
   .skillContainer{
@@ -151,12 +150,6 @@
   #activeQuest>.imageParent {
     height: 150px;
   }
-
-
-  /* .firstQuestImage {
-    clip-path: none !important;
-  } */
-
   .imageParent .questImage {
     background-size: fill;
     background-position: center;
