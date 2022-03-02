@@ -7,4 +7,4 @@ well-structured code can be.
 <br><br>
 You can imagine my excitement about learning software design patterns in the following semester!
 <br><br><br>
-Ah, btw you can download the game <a href="https://portfolio.fh-salzburg.ac.at/projects/2021-symphonic-forest" download> here.</a>
+Ah, btw you can download the game <a style="color:#64FF99;" href="https://portfolio.fh-salzburg.ac.at/projects/2021-symphonic-forest" download> here.</a>

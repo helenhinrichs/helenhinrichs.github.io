@@ -11,4 +11,4 @@ NoteManager I implemented is able to store notes and replay them (most time) cor
 examples as well as the structure of xml-files created by Musescore. 
 I've always loved solving problems by abstraction. So im glad and proud, that I didn't need any external help with this.
 <br><br>
-If you want to try it yourself, you can download the game <a href="https://portfolio.fh-salzburg.ac.at/projects/2022-gegen-elise" download> here.</a>
+If you want to try it yourself, you can download the game <a style="color:#64FF99;" href="https://portfolio.fh-salzburg.ac.at/projects/2022-gegen-elise" download> here.</a>
