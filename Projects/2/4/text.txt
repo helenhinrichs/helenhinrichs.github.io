@@ -6,3 +6,5 @@ I learned how to organize myself, divide problems into little pieces to master e
 well-structured code can be. 
 <br><br>
 You can imagine my excitement about learning software design patterns in the following semester!
+<br><br><br>
+Ah, btw you can download the game <a href="../SymphonicForest_Game.zip" download> here.</a>
