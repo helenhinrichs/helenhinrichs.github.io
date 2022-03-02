@@ -10,3 +10,5 @@ Although my xml-file reader still has room for improvement, it is able to read (
 NoteManager I implemented is able to store notes and replay them (most time) correctly. I achieved this by studying xml-reader
 examples as well as the structure of xml-files created by Musescore. 
 I've always loved solving problems by abstraction. So im glad and proud, that I didn't need any external help with this.
+<br><br>
+If you want to try it yourself, you can download the game <a href="https://portfolio.fh-salzburg.ac.at/projects/2022-gegen-elise" download> here.</a>
