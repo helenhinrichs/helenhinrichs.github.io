@@ -91,7 +91,21 @@ async function loadProjectData(folderName)
                             let pageImagePath = folderName + '/' + i +'/' + j + '/image.png';
                             if(!imageExists(pageImagePath)){
                                 pageImagePath = folderName + '/' + i +'/' + j + '/video.mp4';
-                                isVideo = true;
+                                if(imageExists(pageImagePath))
+                                {
+                                    isVideo = true;
+                                }
+                                else
+                                {
+                                    pageImagePath = folderName + '/' + i +'/' + j + '/image.gif';
+                                    if(pageImagePath.split('.').pop() == "gif")
+                                    {
+                                        console.log("gif");
+                                    }
+                                    else{
+                                        console.log("no gif");
+                                    }
+                                }
                             }
                             await fetch(description)
                                 .then(function(response) {
@@ -247,7 +261,8 @@ async function displayProjectPage(pageIndex){
                 }
                 else
                 {
-                    box.innerHTML +=`<img class="galeryImage" src="`+ projects[index].pages[i].imagePath+`" alt="Symphonic Forest">`;
+                    box.innerHTML +=`<img class="galeryImage" src="`+ projects[index].pages[i].imagePath+`"`
+                    +(( projects[index].pages[i].imagePath.split('.').pop() == "gif")? `style="margin: 0vw 10vw;"` : "") + `>`;
                 }
                 box.innerHTML += `<div class="greyBox projectPageText">
                                 <div>`+ projects[index].pages[i].description +`</div>`

@@ -1,1 +1,10 @@
-Seite 2
+<h2 style="text-align: left;">My role in the project</h2>
+<br>
+In this project I was responsible for the following tasks/areas:
+<ul>
+    <li>Planning and Implementing the game engine(together with my partner)</li>
+    <li>Finding a way to read in MIDI files (or an equvalent) and implement it</li>
+    <li>Implementing animations and sound</li>
+    <li>Implementing gameplay (together with my partner)</li>
+    <li>Searching and modifying graphic and sound assets</li>
+</ul> 

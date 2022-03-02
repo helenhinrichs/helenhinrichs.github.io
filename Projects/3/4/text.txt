@@ -1,0 +1,12 @@
+<h2 style="text-align: left;">Most Important Learnings</h2>
+<br>
+My biggest achievement in this project is the programming of spatial hashing collision detection. I knew the concept before but 
+never had the need to implement it. I think I always had big respect for optimization strategies for collision detection. 
+But I was able to solve this problem in under two hours and was so proud that I had done this without any help. 
+This taught me, that I don't have to be afraid if problems or algorithms seem to be a lot of complicated work. 
+I know that I can handle even the big problems.
+<br><br>
+Although my xml-file reader still has room for improvement, it is able to read (especially baroque) piano pieces and the 
+NoteManager I implemented is able to store notes and replay them (most time) correctly. I achieved this by studying xml-reader
+examples as well as the structure of xml-files created by Musescore. 
+I've always loved solving problems by abstraction. So im glad and proud, that I didn't need any external help with this.
